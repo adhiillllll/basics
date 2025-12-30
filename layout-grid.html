@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>basic layout-grid</title>
+        <style>
+            body {
+                width: 100vw;
+                height: 100vh;
+                margin: 0;
+                
+            }
+            .main {
+                width: 100vw;
+                height: 100vh;
+                display: grid;
+            }
+            .row1 {
+                width: 100vw;
+                display: grid;
+                grid-template-columns: 50% 50%;
+            }
+            .div1 {
+                background: yellow;
+                
+
+            }
+            .div2 {
+                background: red;
+                
+            }
+            .div3 {
+                background: blue;
+
+            } 
+        </style>
+    </head>
+    <body>
+        <div class="main">
+            <div class="row1">
+                <div class="div1">section 1</div>
+                <div class="div2">section 2</div>
+            </div>
+            <div class="div3">section 3</div>
+        </div>
+        
+    </body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Basic layout-flex</title>
+        <style>
+            body {
+                width: 100%;
+                height: 100%;
+
+            }
+            .main{
+                width: 100vw;
+                height: 100vh;
+            }
+            .row1 {
+                width: 100%;
+                height: 50vh;
+                overflow: hidden;
+            }
+            .div1 {
+            float: left;
+            width: 50%;
+            height: 100%;
+            background: yellow;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            }
+            .div2 {
+            float: left;
+            width: 50%;
+            height: 100%;
+            background: green;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            }
+            .div3 {
+            width: 100%;
+            height: 50vh;
+            background: blue;
+            clear: both;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="main">
+            <div class="row1">
+                <div class="div1">section 1</div>
+                <div class="div2">section 2</div>
+            </div>
+            <div class="div3">section 3</div>
+        </div>
+    </body>
+</html>
