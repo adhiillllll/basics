@@ -1,0 +1,30 @@
+
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fffb00;
+}
+
+.card {
+    background-color: rgb(9, 255, 0);
+    width: 280px;
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+button {
+    padding: 8px 16px;
+    border: none;
+    background-color: #333;
+    color: rgb(238, 255, 0);
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: black;
+}
