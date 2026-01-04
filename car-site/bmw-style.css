@@ -57,3 +57,61 @@ html, body {
   opacity: 0.8;
   cursor: pointer;
 }
+.page2 {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  background-image: url(./images/behance_img_2.jpg);
+  background-size: cover;
+  background-position: center;
+
+}
+.page3 {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  background-image: url(./images/behance_img_7.jpg);
+  background-image: url(./images/behance_img_5.jpg);
+  background-size: cover;
+  background-position: center;
+}
+.page4 {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  background-image: url(./images/behance_img_12-removebg-preview.png);
+  background-size: cover;
+  background-position: center;
+}
+.page5 {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  background-image: url(./images/behance_img_5.jpg);
+  background-size: cover;
+  background-position: center;
+}
+.page6 {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  background-image: url(./images/behance_img_10.jpg);
+  background-size: cover;
+  background-position: center;
+}
+.page7 {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  background-image: url(./images/behance_img_10.jpg);
+  background-size: cover;
+  background-position: center;
+}
+.page8 {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  background-image: url(./images/behance_img_13.jpg);
+  background-size: cover;
+  background-position: center;
+}
