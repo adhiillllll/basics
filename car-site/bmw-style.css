@@ -12,6 +12,14 @@ html, body {
   background: #0b0d14;
 }
 
+.logo {
+  position: fixed;
+  top: 20px;
+  right: 40px;
+  width: 55px;
+  z-index: 1000;
+}
+
 .slider {
   display: flex;
   height: 100vh;
@@ -134,13 +142,13 @@ html, body {
 
 }
 .testdrive-blur h2 {
-  font-size: 28px;
+  font-size: 29px;
   letter-spacing: 3px;
   margin-bottom: 10px;
 
 }
 .subtitle {
-  font-size: 14px;
+  font-size: 20px;
   letter-spacing: 1px;
   margin-bottom: 40px;
 
