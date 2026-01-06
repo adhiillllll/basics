@@ -11,14 +11,31 @@ html, body {
   font-family: 'Oswald', sans-serif;
   background: #0b0d14;
 }
+.page-logos {
+  position: absolute;
+  z-index: 10;
+  cursor: pointer;
+}
 
 .logo {
-  position: fixed;
+  position: absolute;
   top: 20px;
   right: 40px;
   width: 55px;
-  z-index: 1000;
 }
+.social {
+  position: absolute;
+  left: 20px;
+  width: 40px;
+  opacity: 0.8;
+  
+}
+
+.youtube {top: 42vh;}
+
+.instagram {top: 50vh;}
+
+.facebook {top: 58vh;}
 
 .slider {
   display: flex;
