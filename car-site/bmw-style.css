@@ -143,15 +143,67 @@ html, body {
   background-size: cover;
   background-position: center;
 }
+
+
 .page5 {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  overflow: hidden;
+}
+.inte-exte {
+  position: relative;
   width: 100%;
   height: 100%;
-  display: flex;
-  background-image: url(./images/behance_img_5.jpg);
-  background-image: url(./images/bmw_steering.png);
+
+}
+.inte-left {
+  position: absolute;
+  inset: 0;
+  background-image: url(./images/bmw_steering.jpg);
+  background-size: cover;
+  background-position: left;
+  clip-path: polygon(0 0, 60% 0, 45% 100%, 0 100%);
+
+
+}
+.inte-right {
+  position: absolute;
+  inset: 0;
+  background-image: url(./images/behance_img_5\ \(mirror\).jpg);
   background-size: cover;
   background-position: center;
+  clip-path: polygon(60% 0, 100% 0, 100% 100%, 45% 100%);
+
+
 }
+.inte-left::after,
+.inte-right::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(10, 12, 20, 0.35);
+}
+.label {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 36px;
+  letter-spacing: 4px;
+  color: white;
+  z-index: 5;
+
+}
+.interior {
+  left: 15%;
+
+}
+.exterior {
+  right: 15%;
+}
+
+
 .page6 {
   width: 100%;
   height: 100%;
@@ -171,6 +223,8 @@ html, body {
   align-items: center;
   justify-content: center;
 }
+
+
 .page8 {
   width: 100%;
   height: 100%;
@@ -222,7 +276,6 @@ html, body {
   outline: none;
 
 }
-
 .testdrive-form input::placeholder {
   color: rgba(255, 255, 255, 0.5);
 } 
