@@ -26,12 +26,23 @@ html, body {
   right: 40px;
   width: 55px;
 }
+.logo:hover {
+  transform: scale(1.10);
+  transition: transform 0.5s ease;
+}
 .social {
   position: absolute;
   left: 20px;
   width: 40px;
-  opacity: 0.8;
-  
+  opacity: 0.6;
+
+}
+
+.social:hover {
+  transform: scale(1.10) translateX(2px);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  opacity: 1;
+ 
 }
 
 .facebook {top: 40vh;}
@@ -99,10 +110,12 @@ html, body {
 
 .menu h4:hover {
   transform: translateX(4px);
+  opacity: 1;
 }
 
 .menu p:hover {
   transform: translateX(4px);
+  opacity: 1;
 }
 .page2 {
   width: 100%;
@@ -226,6 +239,8 @@ html, body {
 
 }
 .testdrive-form button:hover {
-  transform: translateX(4px);
-  transition: 0.03s ease;
+  transform: scale(1.02) translateX(4px);
+  box-shadow: 0 10px 35px rgba(218, 0, 109, 0.4);
+  transition: transform 0.5s ease , box-shadow 0.5s ease;
+
 }
