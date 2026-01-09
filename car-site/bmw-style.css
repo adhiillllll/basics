@@ -84,7 +84,11 @@ html, body {
   display: flex;
   align-items: center;
   padding-left: 90px;
-  clip-path: polygon(0% 0%, 80% 0%, 60% 100%, 0% 100%);
+  clip-path: polygon(
+    0% 0%, 
+    80% 0%, 
+    60% 100%, 
+    0% 100%);
 
 }
 .menu {
@@ -164,8 +168,11 @@ html, body {
   background-image: url(./images/bmw_steering.jpg);
   background-size: cover;
   background-position: left;
-  clip-path: polygon(0 0, 60% 0, 45% 100%, 0 100%);
-
+  clip-path: polygon(
+    0 0, 
+    65% 0, 
+    50% 100%, 
+    0 95%);
 
 }
 .inte-right {
@@ -174,7 +181,11 @@ html, body {
   background-image: url(./images/behance_img_5\ \(mirror\).jpg);
   background-size: cover;
   background-position: center;
-  clip-path: polygon(60% 0, 100% 0, 100% 100%, 45% 100%);
+  clip-path: polygon(
+    65% 0, 
+    100% 0, 
+    100% 100%, 
+    40% 100%);
 
 
 }
@@ -184,6 +195,7 @@ html, body {
   position: absolute;
   inset: 0;
   background: rgba(10, 12, 20, 0.35);
+  /* background: circle at center , rgba(0, 0, 0, 0.1); */
 }
 .label {
   position: absolute;
@@ -220,8 +232,86 @@ html, body {
   background-image: url(./images/behance_img_10.jpg);
   background-size: cover;
   background-position: center;
-  align-items: center;
-  justify-content: center;
+}
+.page7::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg , rgba(40,30,60,.30) , rgba(120, 40, 70, .45) );
+  backdrop-filter: blur(4px);
+}
+.dashboard {
+  position: absolute;
+  top: 18%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 640px;
+}
+.dashboard-img {
+  position: relative;
+  width: 100%;
+  height: 240px;
+  clip-path: polygon(
+    18% 0%, 
+    100% 0%, 
+    82% 100%, 
+    0% 100%);
+  overflow: hidden;
+  background: black;
+  z-index: 2;
+}
+.dashboard-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.dashboard-img::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(
+      circle at 70% 30%,
+      rgba(255,120,160,.25),
+      transparent 60%
+    ),
+    linear-gradient(
+      120deg,
+      rgba(255,255,255,.08),
+      rgba(0,0,0,.25)
+    );
+  pointer-events: none;
+}
+.dashboard-text {
+  position: relative;
+  width: 660px;
+  margin: -55px auto 0;
+  background: rgba(0, 0, 0, .70);
+  clip-path: polygon(
+    20% 0%,
+    100% 0%,
+    80% 100%,
+    0% 100%);
+    z-index: 1;
+}
+.inner-text {
+  padding: 96px 110px 72px;
+  color: white;
+}
+.inner-text p {
+  font-size: 18px;
+  line-height: 1.8;
+  opacity: .92;
+  margin-bottom: 22px;
+}
+.inner-text span {
+  font-size: 20px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  opacity: .85;
+}
+.inner-text span:hover {
+  opacity: 1;
 }
 
 
@@ -242,7 +332,11 @@ html, body {
   padding: 80px 70px;
   color: white;
   z-index: 2;
-  clip-path: polygon(0% 0%, 80% 0%, 60% 100%, 0% 100%);
+  clip-path: polygon(
+    0% 0%, 
+    80% 0%, 
+    60% 100%, 
+    0% 100%);
 
 }
 .testdrive-blur h2 {
