@@ -125,11 +125,12 @@ html, body {
   width: 100%;
   height: 100%;
   display: flex;
-  background-image: url(./images/behance_img_2.jpg);
+  background-image: url("./images/behance_img_2.jpg");
   background-size: cover;
   background-position: center;
 
 }
+
 
 .page3 {
   position:relative;
@@ -174,7 +175,7 @@ html, body {
 }
 
 .carlights-text p{
-  font-size:20px;
+  font-size:24px;
   line-height:1.9;
   opacity:0.88;
 }
@@ -211,11 +212,12 @@ html, body {
   z-index:0;
 }
 
+
 .page4 {
   width: 100%;
   height: 100%;
   display: flex;
-  background-image: url(./images/bmw_emplom-removebg-preview.png);
+  background-image: url("./images/bmw_emplom-removebg-preview.png");
   background-size: cover;
   background-position: center;
 }
@@ -237,7 +239,7 @@ html, body {
 .inte-left {
   position: absolute;
   inset: 0;
-  background-image: url(./images/bmw_steering.jpg);
+  background-image: url("./images/bmw_steering.jpg");
   background-size: cover;
   background-position: left;
   clip-path: polygon(
@@ -250,7 +252,7 @@ html, body {
 .inte-right {
   position: absolute;
   inset: 0;
-  background-image: url(./images/behance_img_5\ \(mirror\).jpg);
+  background-image: url("./images/behance_img_5\ \(mirror\).jpg");
   background-size: contain;
   background-position: right;
   clip-path: polygon(
@@ -279,23 +281,96 @@ html, body {
   z-index: 5;
 
 }
-.interior {
+.inte {
   left: 15%;
 
 }
-.exterior {
+.exte {
   right: 15%;
 }
 
 
+
 .page6 {
+  position: relative;
   width: 100%;
   height: 100%;
-  display: flex;
-  background-image: url(./images/behance_img_10.jpg);
+  background-image: url("./images/behance_img_10.jpg");
   background-size: cover;
   background-position: center;
 }
+.page6::before {
+  content:"";
+  position:absolute;
+  inset: 0;
+  background: linear-gradient(
+    120deg,
+    rgba(40,30,60,.30),
+    rgba(120,40,70,.45)
+  );
+  backdrop-filter: blur();
+}
+.interior {
+  position:relative;
+  z-index:2;
+  width:100%;
+  height:100%;
+}
+.interior-text {
+  position:absolute;
+  right:10%;
+  top:47%;
+  transform:translateY(-50%);
+  color:white;
+}
+.interior-text h2 {
+  font-size:50px;
+  letter-spacing:4px;
+  margin-bottom:10px;
+  opacity: .92;
+}
+.interior-text p {
+  font-size:24px;
+  letter-spacing:2px;
+  opacity:.85;
+}
+.plus-box {
+  position:absolute;
+  width:143px;
+  height:55px;
+  background:rgba(0,0,0,.75);
+  clip-path:polygon(
+    23% 0%,
+    100% 0%,
+    77% 100%,
+    0% 100%);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:rgba(255,255,255,.75);
+  font-size:22px;
+  font-weight:300;
+  box-shadow:0 6px 18px rgba(0,0,0,.1);
+  cursor:pointer;
+  font-size: 40px;
+}
+.plus-box:hover {
+  transform: scale(1.13);
+  transition: 0.5s ease;
+  background:rgba(255, 0, 93, 0.9);
+  color:white;
+}
+.p1{ top:13%; left:17%; }
+.p2{ top:15%; right:17%; }
+.p3{ top:28%; left:31%; }
+.p4{ top:29%; right:40%; }
+.p5{ bottom:33%; left:39%; }
+.p6{ bottom:38%; right:38%; }
+.p7{ bottom:33%; right:22%; }
+
+
+
+
 .page7 {
   position: relative;
   width: 100%;
