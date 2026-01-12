@@ -86,8 +86,8 @@ html, body {
   padding-left: 90px;
   clip-path: polygon(
     0% 0%, 
-    80% 0%, 
-    60% 100%, 
+    90% 0%, 
+    50% 100%,
     0% 100%);
 
 }
@@ -121,6 +121,9 @@ html, body {
   transform: translateX(4px);
   opacity: 1;
 }
+
+
+
 .page2 {
   width: 100%;
   height: 100%;
@@ -130,6 +133,7 @@ html, body {
   background-position: center;
 
 }
+
 
 
 .page3 {
@@ -213,13 +217,75 @@ html, body {
 }
 
 
+
 .page4 {
+  position: relative;
   width: 100%;
   height: 100%;
-  display: flex;
-  background-image: url("./images/bmw_emplom-removebg-preview.png");
+  background-image: url("./images/behance_img_4.jpg");
   background-size: cover;
   background-position: center;
+  overflow: hidden;
+}
+.page4::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg , rgba(40,30,60,.55) , rgba(120,40,70,.45));
+  backdrop-filter: blur(4px);
+  z-index: 1;
+}
+
+.left-side {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 67vw;
+  height: 100vh;
+  background: linear-gradient(135deg , rgba(10,10,25,.95) , rgba(10,10,25,.55));
+  backdrop-filter: blur(7px);
+  clip-path:polygon(
+    0% 0%, 
+    93% 0%, 
+    50% 100%, 
+    0% 100%
+  );
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  padding-left: 7%;
+}
+.left-side-text {
+  width: 45%;
+  color: white;
+}
+.left-side-text h3 {
+  font-size: 30px;
+  letter-spacing: 3px;
+  margin-bottom: 24px;
+}
+.left-side-text p {
+  font-size: 19px;
+  line-height: 2;
+  opacity: .8;
+}
+.specification {
+  position: absolute;
+  right: 6%;
+  top: 45%;
+  transform: translateY(-50%);
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  gap: -10px;
+}
+.specification img.engine {
+  width: 700px;
+
+}
+.specification img.emplom {
+  width: 500px;
+  opacity: .5;
 }
 
 
@@ -245,7 +311,7 @@ html, body {
   clip-path: polygon(
     0 0, 
     65% 0, 
-    50% 100%, 
+    45% 100%, 
     0 95%);
 
 }
@@ -472,7 +538,7 @@ html, body {
   background-repeat: no-repeat;
 }
 .testdrive-blur {
-  width: 60vw;
+  width: 65vw;
   height: 100vh;
   background: linear-gradient(135deg, rgba(15, 18, 30, 0.9), rgba(15, 18, 30, 0.4));
   backdrop-filter: blur(5px);
@@ -481,8 +547,8 @@ html, body {
   z-index: 2;
   clip-path: polygon(
     0% 0%, 
-    80% 0%, 
-    60% 100%, 
+    90% 0%, 
+    50% 100%, 
     0% 100%);
 
 }
