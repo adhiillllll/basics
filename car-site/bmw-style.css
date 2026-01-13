@@ -124,6 +124,7 @@ html, body {
 
 
 
+
 .page2 {
   width: 100%;
   height: 100%;
@@ -139,23 +140,36 @@ html, body {
 }
 .car-leftside{
   position:absolute;
-  left:7%;
-  top:50%;
-  transform:translateY(-50%);
-  width:420px;
-  color:white;
-  z-index:3;
+  left:0;
+  top:0;
+  width: 67vw;
+  height: 100vh;
+  background: linear-gradient(135deg , rgba(10,10,25,.95) , rgba(10,10,25,.55));
+  backdrop-filter: blur(7px);
+  clip-path:polygon(
+    0% 0%, 
+    90% 0%, 
+    54% 100%, 
+    0% 100%
+  );
+  display: flex;
+  align-items: center;
+  padding-left: 7%;
+  z-index: 2;
 }
 .car-leftside-text h3{
   font-size:34px;
   letter-spacing:3px;
   margin-bottom:22px;
+  color:white;
 }
 
 .car-leftside-text p{
-  font-size:17px;
+  font-size:22px;
   line-height:1.9;
-  opacity:.85;
+  opacity:.8;
+  width:550px;
+  color:white;
 }
 .car {
   position: relative;
@@ -164,15 +178,15 @@ html, body {
 }
 .page-background{
   position:absolute;
-  right:0;
+  right:7%;
   top:50%;
   transform:translateY(-50%);
   width:640px;
   height:420px;
   clip-path: polygon(
-    15% 0%,
+    32% 0%,
     100% 0%,
-    85% 100%,
+    68% 100%,
     0% 100%
   );
   overflow:hidden;
@@ -193,6 +207,8 @@ html, body {
   width:1000px;
   filter: drop-shadow(0 30px 45px rgba(0,0,0,.7));
 }
+
+
 
 
 .page3 {
@@ -274,6 +290,7 @@ html, body {
   right:160px;
   z-index:0;
 }
+
 
 
 
@@ -400,6 +417,7 @@ html, body {
 
 
 
+
 .page5 {
   position: relative;
   width: 100vw;
@@ -465,6 +483,7 @@ html, body {
 .exte {
   right: 15%;
 }
+
 
 
 
@@ -548,6 +567,7 @@ html, body {
 
 
 
+
 .page7 {
   position: relative;
   width: 100%;
@@ -566,9 +586,8 @@ html, body {
 }
 .dashboard {
   position: absolute;
-  top: 18%;
-  left: 50%;
-  transform: translateX(-50%);
+  top: 15%;
+  left: 35%;
   width: 640px;
 }
 .dashboard-img {
@@ -637,6 +656,8 @@ html, body {
 .inner-text span:hover {
   opacity: 1;
 }
+
+
 
 
 .page8 {
