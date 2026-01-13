@@ -127,11 +127,72 @@ html, body {
 .page2 {
   width: 100%;
   height: 100%;
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 15% 30%, rgba(40,0,80,.95), transparent 55%),
+    radial-gradient(circle at 85% 70%, rgba(180,0,80,.95), transparent 60%),
+    linear-gradient(120deg, rgb(8,0,20), rgb(18,0,35), rgb(30,0,40));
   display: flex;
-  
-
+  justify-content: center;
+  align-items: center;
+}
+.car-leftside{
+  position:absolute;
+  left:7%;
+  top:50%;
+  transform:translateY(-50%);
+  width:420px;
+  color:white;
+  z-index:3;
+}
+.car-leftside-text h3{
+  font-size:34px;
+  letter-spacing:3px;
+  margin-bottom:22px;
 }
 
+.car-leftside-text p{
+  font-size:17px;
+  line-height:1.9;
+  opacity:.85;
+}
+.car {
+  position: relative;
+  width: 1200px;
+  height: 600px;
+}
+.page-background{
+  position:absolute;
+  right:0;
+  top:50%;
+  transform:translateY(-50%);
+  width:640px;
+  height:420px;
+  clip-path: polygon(
+    15% 0%,
+    100% 0%,
+    85% 100%,
+    0% 100%
+  );
+  overflow:hidden;
+  z-index:1;
+}
+.page-background img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+.car-cut{
+  position:absolute;
+  right:40px;
+  bottom:20px;
+  z-index:2;
+}
+.car-cut img{
+  width:1000px;
+  filter: drop-shadow(0 30px 45px rgba(0,0,0,.7));
+}
 
 
 .page3 {
