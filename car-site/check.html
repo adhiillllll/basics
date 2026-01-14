@@ -2,185 +2,105 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>BMW UI Page 2</title>
-
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BMW M Competition</title>
 <style>
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  font-family: Arial, sans-serif;
-}
 
-html,body{
-  width:100%;
-  height:100%;
-  background:#000;
-  overflow:hidden;
-}
 
-/* ==== PAGE 2 SECTION ==== */
-.page2{
-  width:100%;
-  height:100vh;
-  position:relative;
-  overflow:hidden;
-  background:
-    radial-gradient(circle at 15% 30%, rgba(40,0,80,.95), transparent 55%),
-    radial-gradient(circle at 85% 70%, rgba(180,0,80,.95), transparent 60%),
-    linear-gradient(120deg, rgb(8,0,20), rgb(18,0,35), rgb(30,0,40));
-  display:flex;
-  justify-content:center;
-  align-items:center;
-}
 
-/* ==== LOGOS ==== */
-.page-logos{
-  position:absolute;
-  top:20px;
-  right:40px;
-  z-index:5;
-}
-
-.logo{
-  width:55px;
-}
-
-/* Social icons left side */
-.social{
-  position:absolute;
-  left:20px;
-  width:22px;
-  opacity:0.7;
-  transition:.3s;
-}
-.social:hover{
-  opacity:1;
-  transform:scale(1.1);
-}
-
-.facebook{ top:40vh; }
-.linkedin{ top:44vh; }
-.instagram{ top:48vh; }
-.youtube{ top:52vh; }
-
-/* ==== CAR SECTION ==== */
-.car{
-  position:relative;
-  width:1200px;
-  height:600px;
-}
-
-/* Parallelogram background */
-.page-background{
-  position:absolute;
-  right:0;
-  top:50%;
-  transform:translateY(-50%);
-  width:640px;
-  height:420px;
-  clip-path: polygon(
-    20% 0%,
-    100% 0%,
-    80% 100%,
-    0% 100%
-  );
-  overflow:hidden;
-  z-index:1;
-}
-
-.page-background img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-}
-
-/* Car PNG */
-.car-cut{
-  position:absolute;
-  right:40px;
-  bottom:20px;
-  z-index:2;
-}
-
-.car-cut img{
-  width:720px;
-  filter: drop-shadow(0 30px 45px rgba(0,0,0,.9));
-}
-
-/* ==== LEFT TEXT ==== */
-.car-leftside{
-  position:absolute;
-  left:7%;
-  top:50%;
-  transform:translateY(-50%);
-  width:420px;
-  color:white;
-  z-index:3;
-}
-
-.car-leftside-text h3{
-  font-size:34px;
-  letter-spacing:3px;
-  margin-bottom:22px;
-}
-
-.car-leftside-text p{
-  font-size:17px;
-  line-height:1.9;
-  opacity:.85;
-}
-
-/* ==== RESPONSIVE ==== */
-@media(max-width:1024px){
-  .car{width:100%; height:500px;}
-  .page-background{width:480px; height:320px;}
-  .car-cut img{width:520px;}
-  .car-leftside{width:320px; left:5%;}
-}
 </style>
-
 </head>
 <body>
 
-<section class="page2">
-
-  <!-- BMW Logo -->
-  <div class="page-logos">
-    <img src="./images/BMW_logo-removebg-preview.png" class="logo">
+<!-- PAGE 1 -->
+<section class="slide page1">
+  <div class="hero-text">
+    <h1>BMW M4</h1>
+    <p>Pure Driving Emotion</p>
   </div>
+</section>
 
-  <!-- Social icons -->
-  <img src="./images/facebook_logo.png" class="social facebook">
-  <img src="./images/linkedin_logo.png" class="social linkedin">
-  <img src="./images/instagram_logo.png" class="social instagram">
-  <img src="./images/youtube_logo.png" class="social youtube">
-
-  <!-- Left text -->
-  <div class="car-leftside">
-    <div class="car-leftside-text">
-      <h3>ATHLETIC COUPÉ SILHOUETTE</h3>
+<!-- PAGE 2 -->
+<section class="slide page2">
+  <div class="page2-content">
+    <div class="page2-text">
+      <h2>ATHLETIC COUPÉ SILHOUETTE</h2>
       <p>
-        The car, with sculpted lines and a smoothly sloping coupé roof,
-        combined with exclusive lightweight alloy wheels and aerodynamic
-        M exterior mirrors, radiates concentrated sporty energy.
-        The elongated silhouette ends with a striking rear section
-        that embodies restrained power.
+        Sculpted lines and a smoothly sloping coupé roof combine with exclusive
+        lightweight wheels and aerodynamic mirrors to radiate sporty energy.
+      </p>
+    </div>
+    <img src="./images/coupe.png" alt="car">
+  </div>
+</section>
+
+<!-- PAGE 3 -->
+<section class="slide page3">
+  <div class="page3-content">
+    <div class="page3-text">
+      <h2>LED HEADLIGHTS</h2>
+      <p>Striking LED design for a powerful night presence.</p>
+    </div>
+    <img src="./images/headlights.png" alt="headlights">
+  </div>
+</section>
+
+<!-- PAGE 4 -->
+<section class="slide page4">
+
+  <div class="left-side">
+    <div class="left-side-text">
+      <h3>M ENGINE COMPETITION</h3>
+      <p>
+        The 3.0-liter M TwinPower Turbo engine combines high rev capability
+        with enormous torque and explosive acceleration.
       </p>
     </div>
   </div>
 
-  <!-- Car + background -->
-  <div class="car">
-    <div class="page-background">
-      <img src="./images/page_2_background.jpg" alt="background">
+  <div class="specification">
+    <img src="./images/engine.png" class="engine">
+    <img src="./images/bmw-logo.png" class="emplom">
+  </div>
+
+  <div class="stats">
+    <div class="stat-box">
+      <span>POWER</span>
+      <h3>450</h3>
+      <span>HP</span>
     </div>
 
-    <div class="car-cut">
-      <img src="./images/behance_img_2-removebg-preview.png" alt="car">
+    <div class="stat-box">
+      <span>0-100 KM/H</span>
+      <h3>4.1</h3>
+      <span>SEC</span>
+    </div>
+
+    <div class="stat-box">
+      <span>TOP SPEED</span>
+      <h3>300</h3>
+      <span>KM/H</span>
     </div>
   </div>
 
+</section>
+
+<!-- PAGE 5 -->
+<section class="slide page5">
+  <div class="page5-content">
+    <img src="./images/interior.png" alt="interior">
+    <div class="page5-text">
+      <h2>INTERIOR</h2>
+    </div>
+  </div>
+</section>
+
+<!-- PAGE 6 -->
+<section class="slide page6">
+  <div class="page6-content">
+    <h2>TEST DRIVE</h2>
+    <button>START</button>
+  </div>
 </section>
 
 </body>
