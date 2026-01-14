@@ -6,7 +6,264 @@
 <title>BMW M Competition</title>
 <style>
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
 
+body {
+  background: #000;
+  color: white;
+  overflow-x: hidden;
+}
+
+/* ===== GLOBAL SLIDE ===== */
+.slide {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+/* ===== PAGE 1 (HERO) ===== */
+.page1 {
+  background: url("./images/hero-bg.jpg") center/cover no-repeat;
+}
+
+.page1::before {
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(120deg, rgba(20,10,40,.9), rgba(120,30,60,.4));
+}
+
+.hero-text {
+  position:absolute;
+  left:8%;
+  top:40%;
+  z-index:2;
+}
+
+.hero-text h1 {
+  font-size:60px;
+  letter-spacing:4px;
+}
+
+.hero-text p {
+  margin-top:20px;
+  font-size:18px;
+  opacity:.8;
+}
+
+/* ===== PAGE 2 (COUPE) ===== */
+.page2 {
+  background: linear-gradient(120deg,#0a0818,#2a0f28);
+}
+
+.page2-content {
+  position:absolute;
+  inset:0;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:0 8%;
+}
+
+.page2-text {
+  width:35%;
+}
+
+.page2-text h2 {
+  font-size:32px;
+  letter-spacing:3px;
+  margin-bottom:20px;
+}
+
+.page2-text p {
+  font-size:18px;
+  line-height:1.8;
+  opacity:.8;
+}
+
+.page2 img {
+  width:700px;
+}
+
+/* ===== PAGE 3 (HEADLIGHTS) ===== */
+.page3 {
+  background: linear-gradient(120deg,#05050f,#2a0830);
+}
+
+.page3-content {
+  position:absolute;
+  inset:0;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:0 8%;
+}
+
+.page3-text {
+  width:35%;
+}
+
+.page3 img {
+  width:650px;
+}
+
+/* ===== PAGE 4 (ENGINE) ===== */
+.page4 {
+  position: relative;
+  background: url("./images/behance_img_4.jpg") center/cover no-repeat;
+}
+
+.page4::before {
+  content:"";
+  position:absolute;
+  inset:0;
+  background: linear-gradient(120deg, rgba(40,30,60,.55), rgba(120,40,70,.15));
+  backdrop-filter: blur(12px);
+  z-index:1;
+}
+
+/* Left angled panel */
+.left-side {
+  position:absolute;
+  left:0;
+  top:0;
+  width:67vw;
+  height:100vh;
+  background: linear-gradient(135deg, rgba(10,10,25,.95), rgba(10,10,25,.55));
+  clip-path: polygon(0 0, 93% 0, 50% 100%, 0 100%);
+  z-index:2;
+  display:flex;
+  align-items:center;
+  padding-left:7%;
+}
+
+.left-side-text {
+  width:45%;
+}
+
+.left-side-text h3 {
+  font-size:30px;
+  letter-spacing:3px;
+  margin-bottom:20px;
+}
+
+.left-side-text p {
+  font-size:18px;
+  line-height:1.9;
+  opacity:.8;
+}
+
+/* Engine + Logo */
+.specification {
+  position:absolute;
+  right:6%;
+  top:50%;
+  transform:translateY(-50%);
+  z-index:3;
+}
+
+.specification .engine {
+  width:780px;
+  position:relative;
+  z-index:2;
+}
+
+.specification .emplom {
+  position:absolute;
+  width:450px;
+  right:-120px;
+  top:-40px;
+  opacity:.5;
+  z-index:1;
+}
+
+/* Stats boxes */
+.stats {
+  position:absolute;
+  bottom:12%;
+  left:30%;
+  display:flex;
+  gap:25px;
+  z-index:3;
+}
+
+.stat-box {
+  width:230px;
+  height:90px;
+  background:rgba(0,0,0,.65);
+  clip-path: polygon(15% 0%,100% 0%,85% 100%,0 100%);
+  padding-left:25px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+
+.stat-box span {
+  font-size:12px;
+  opacity:.7;
+  letter-spacing:1px;
+}
+
+.stat-box h3 {
+  font-size:32px;
+  margin:4px 0;
+}
+
+/* ===== PAGE 5 (INTERIOR) ===== */
+.page5 {
+  background: linear-gradient(120deg,#070014,#2a001f);
+}
+
+.page5-content {
+  position:absolute;
+  inset:0;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:0 8%;
+}
+
+.page5 img {
+  width:750px;
+}
+
+.page5-text h2 {
+  font-size:32px;
+  letter-spacing:3px;
+}
+
+/* ===== PAGE 6 (TEST DRIVE) ===== */
+.page6 {
+  background: linear-gradient(120deg,#04000a,#200018);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.page6-content {
+  text-align:center;
+}
+
+.page6-content h2 {
+  font-size:40px;
+  margin-bottom:20px;
+}
+
+.page6-content button {
+  padding:15px 40px;
+  background:#e5002b;
+  border:none;
+  color:white;
+  font-size:16px;
+  letter-spacing:2px;
+  cursor:pointer;
+}
 
 </style>
 </head>
