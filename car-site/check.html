@@ -7,9 +7,9 @@
 
 <style>
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
   font-family: Arial, sans-serif;
 }
 
@@ -124,8 +124,8 @@ body {
 
 /* ===== PAGE 4 ENGINE ===== */
 .page4 {
-  position:relative;
   background:url("./images/behance_img_4.jpg") center/cover no-repeat;
+  position:relative;
 }
 
 .page4::before {
@@ -140,7 +140,6 @@ body {
   z-index:1;
 }
 
-/* Diagonal neon streak */
 .page4::after {
   content:"";
   position:absolute;
@@ -159,7 +158,6 @@ body {
   z-index:2;
 }
 
-/* Left angled panel */
 .left-side {
   position:absolute;
   left:0;
@@ -192,7 +190,6 @@ body {
   opacity:.8;
 }
 
-/* Engine + Logo */
 .specification {
   position:absolute;
   right:6%;
@@ -203,8 +200,6 @@ body {
 
 .specification .engine {
   width:780px;
-  position:relative;
-  z-index:2;
   filter: drop-shadow(0 0 25px rgba(80,120,255,.15));
 }
 
@@ -214,11 +209,9 @@ body {
   right:-120px;
   top:-40px;
   opacity:.5;
-  z-index:1;
   filter: drop-shadow(0 0 20px rgba(255,255,255,.25));
 }
 
-/* Stats */
 .stats {
   position:absolute;
   bottom:12%;
@@ -231,8 +224,7 @@ body {
 .stat-box {
   width:230px;
   height:90px;
-  background:
-    linear-gradient(135deg, rgba(0,0,0,.85), rgba(20,20,40,.95));
+  background: linear-gradient(135deg, rgba(0,0,0,.85), rgba(20,20,40,.95));
   border:1px solid rgba(255,255,255,.08);
   backdrop-filter: blur(6px);
   clip-path: polygon(15% 0%,100% 0%,85% 100%,0 100%);
@@ -250,7 +242,6 @@ body {
 
 .stat-box h3 {
   font-size:32px;
-  margin:4px 0;
 }
 
 /* ===== PAGE 5 ===== */
@@ -279,18 +270,48 @@ body {
   letter-spacing:3px;
 }
 
-/* ===== PAGE 6 ===== */
-.page6 {
+/* ===== NEON BACKGROUND ANIMATION ===== */
+.neon-bg {
+  position:absolute;
+  inset:-50%;
   background:
-    radial-gradient(circle at bottom right, rgba(120,40,70,.4), transparent 60%),
-    linear-gradient(120deg,#04000a,#200018);
+    radial-gradient(circle at 20% 20%, rgba(255,60,120,.25), transparent 40%),
+    radial-gradient(circle at 80% 30%, rgba(60,120,255,.25), transparent 40%),
+    radial-gradient(circle at 50% 80%, rgba(120,255,180,.18), transparent 40%);
+  filter: blur(60px);
+  animation: floatGlow 20s linear infinite alternate;
+  z-index:0;
+}
+
+@keyframes floatGlow {
+  0% { transform: translate(-10%, -10%) scale(1); }
+  50% { transform: translate(10%, 5%) scale(1.1); }
+  100% { transform: translate(-5%, 10%) scale(1); }
+}
+
+.streak {
+  position:absolute;
+  width:120%;
+  height:3px;
+  background: linear-gradient(90deg, transparent, rgba(255,80,140,.8), rgba(80,140,255,.8), transparent);
+  opacity:.6;
+  animation: moveStreak 6s linear infinite;
+}
+
+.streak:nth-child(2){ top:40%; animation-delay:2s; }
+.streak:nth-child(3){ top:70%; animation-delay:4s; }
+
+@keyframes moveStreak {
+  from { transform: translateX(-100%); }
+  to { transform: translateX(100%); }
+}
+
+/* ===== PAGE 6 TEST DRIVE ===== */
+.page6 {
+  background: linear-gradient(120deg,#04000a,#200018);
   display:flex;
   align-items:center;
   justify-content:center;
-}
-
-.page6-content {
-  text-align:center;
 }
 
 .page6-content h2 {
@@ -305,14 +326,81 @@ body {
   color:white;
   font-size:16px;
   letter-spacing:2px;
-  cursor:pointer;
 }
 
+/* ===== PAGE 7 EXTERIOR ===== */
+.page7 {
+  background:#050010;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.page7-content {
+  position:relative;
+  z-index:2;
+  display:flex;
+  align-items:center;
+  gap:60px;
+  padding:0 8%;
+}
+
+.page7-text {
+  width:35%;
+}
+
+.page7-text h2 {
+  font-size:32px;
+  letter-spacing:3px;
+  margin-bottom:20px;
+}
+
+.page7-text p {
+  font-size:18px;
+  line-height:1.8;
+  opacity:.8;
+}
+
+.page7 img {
+  width:750px;
+  filter: drop-shadow(0 0 25px rgba(120,40,70,.35));
+}
+
+/* ===== PAGE 8 FINAL ===== */
+.page8 {
+  background:#04000a;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+}
+
+.page8 h2 {
+  font-size:42px;
+  letter-spacing:4px;
+  margin-bottom:20px;
+}
+
+.page8 p {
+  font-size:18px;
+  opacity:.8;
+  margin-bottom:30px;
+}
+
+.page8 button {
+  padding:16px 45px;
+  background: linear-gradient(90deg,#ff2b6a,#3b6fff);
+  border:none;
+  color:white;
+  font-size:15px;
+  letter-spacing:3px;
+  box-shadow:0 0 20px rgba(255,60,120,.6);
+}
 </style>
 </head>
+
 <body>
 
-<!-- PAGE 1 -->
 <section class="slide page1">
   <div class="hero-text">
     <h1>BMW M4</h1>
@@ -320,86 +408,77 @@ body {
   </div>
 </section>
 
-<!-- PAGE 2 -->
 <section class="slide page2">
   <div class="page2-content">
     <div class="page2-text">
       <h2>ATHLETIC COUPÉ SILHOUETTE</h2>
-      <p>
-        Sculpted lines and a smoothly sloping coupé roof combine with exclusive
-        lightweight wheels and aerodynamic mirrors to radiate sporty energy.
-      </p>
+      <p>Sculpted lines and aggressive design define pure M character.</p>
     </div>
-    <img src="./images/behance_img_10.jpg" alt="car">
+    <img src="./images/behance_img_10.jpg">
   </div>
 </section>
 
-<!-- PAGE 3 -->
 <section class="slide page3">
   <div class="page3-content">
     <div class="page3-text">
       <h2>LED HEADLIGHTS</h2>
-      <p>Striking LED design for a powerful night presence.</p>
+      <p>Signature lighting with night dominance.</p>
     </div>
-    <img src="./images/headlights.png" alt="headlights">
+    <img src="./images/headlights.png">
   </div>
 </section>
 
-<!-- PAGE 4 -->
 <section class="slide page4">
-
   <div class="left-side">
     <div class="left-side-text">
       <h3>M ENGINE COMPETITION</h3>
-      <p>
-        The 3.0-liter M TwinPower Turbo engine combines high rev capability
-        with enormous torque and explosive acceleration.
-      </p>
+      <p>High revving power and explosive acceleration.</p>
     </div>
   </div>
-
   <div class="specification">
     <img src="./images/engine.png" class="engine">
     <img src="./images/bmw-logo.png" class="emplom">
   </div>
-
   <div class="stats">
-    <div class="stat-box">
-      <span>POWER</span>
-      <h3>450</h3>
-      <span>HP</span>
-    </div>
-
-    <div class="stat-box">
-      <span>0-100 KM/H</span>
-      <h3>4.1</h3>
-      <span>SEC</span>
-    </div>
-
-    <div class="stat-box">
-      <span>TOP SPEED</span>
-      <h3>300</h3>
-      <span>KM/H</span>
-    </div>
+    <div class="stat-box"><span>POWER</span><h3>450</h3><span>HP</span></div>
+    <div class="stat-box"><span>0-100 KM/H</span><h3>4.1</h3><span>SEC</span></div>
+    <div class="stat-box"><span>TOP SPEED</span><h3>300</h3><span>KM/H</span></div>
   </div>
-
 </section>
 
-<!-- PAGE 5 -->
 <section class="slide page5">
   <div class="page5-content">
-    <img src="./images/interior.png" alt="interior">
-    <div class="page5-text">
-      <h2>INTERIOR</h2>
-    </div>
+    <img src="./images/interior.png">
+    <div class="page5-text"><h2>INTERIOR</h2></div>
   </div>
 </section>
 
-<!-- PAGE 6 -->
 <section class="slide page6">
   <div class="page6-content">
     <h2>TEST DRIVE</h2>
     <button>START</button>
+  </div>
+</section>
+
+<section class="slide page7">
+  <div class="neon-bg"></div>
+  <div class="streak"></div><div class="streak"></div><div class="streak"></div>
+  <div class="page7-content">
+    <div class="page7-text">
+      <h2>EXTERIOR DESIGN</h2>
+      <p>Aggressive stance with aerodynamic perfection.</p>
+    </div>
+    <img src="./images/exterior.png">
+  </div>
+</section>
+
+<section class="slide page8">
+  <div class="neon-bg"></div>
+  <div class="streak"></div><div class="streak"></div><div class="streak"></div>
+  <div>
+    <h2>EXPERIENCE THE M POWER</h2>
+    <p>Book your test drive today</p>
+    <button>BOOK NOW</button>
   </div>
 </section>
 
