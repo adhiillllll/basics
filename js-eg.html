@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>HTML + CSS + JavaScript Example</title>
+
+  
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 100px;
+      background-color: white;
+      transition: background-color 0.5s;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      border: none;
+      background-color: black;
+      color: white;
+      border-radius: 5px;
+    }
+
+    button:hover {
+      background-color: gray;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>My First JavaScript Page 🚀</h1>
+  <p id="text">Click the button to change background color!</p>
+
+  <button onclick="changeColor()">Change Color</button>
+
+  <script>
+    let isBlue = false;
+
+    function changeColor() {
+      if (isBlue) {
+        document.body.style.backgroundColor = "white";
+        document.getElementById("text").innerText = "Click the button to change background color!";
+      } else {
+        document.body.style.backgroundColor = "lightblue";
+        document.getElementById("text").innerText = "Background changed using JavaScript 😎";
+      }
+      isBlue = !isBlue;
+    }
+  </script>
+
+</body>
+</html>
